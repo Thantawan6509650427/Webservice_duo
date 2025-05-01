@@ -70,11 +70,11 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-> รันที่: `http://localhost:8081`
+> รันที่: `http://localhost:8080`
 
 > หากต้องการเปลี่ยนพอร์ต: แก้ไฟล์ `src/main/resources/application.properties`  
 ```properties
-server.port=8081
+server.port=8080
 ```
 
 ---
@@ -94,11 +94,11 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-> รันที่: `http://localhost:8082`
+> รันที่: `http://localhost:8081`
 
 > หากต้องการเปลี่ยนพอร์ต: แก้ไฟล์ `src/main/resources/application.properties`  
 ```properties
-server.port=8082
+server.port=8081
 ```
 
 ---
@@ -130,7 +130,7 @@ server.port=8082
 
 เปิดเบราว์เซอร์ไปที่:
 ```
-http://localhost:8081/h2-console
+http://localhost:8080/h2-console
 ```
 
 - JDBC URL: ใช้ค่าจาก `application.properties` เช่น:
