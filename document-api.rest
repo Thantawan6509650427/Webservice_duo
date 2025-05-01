@@ -1,0 +1,53 @@
+### 1. ขอเข้าถึงเอกสาร (ACCESS)
+POST http://localhost:8080/api/services/access
+Content-Type: application/json
+
+{
+  "requesterId": 1,
+  "providerId": 2,
+  "documentId": 1
+}
+
+### 2. ลงนามเอกสาร (SIGNATURE)
+POST http://localhost:8080/api/services/sign
+Content-Type: application/json
+
+{
+  "requesterId": 2,
+  "providerId": 1,
+  "documentId": 3,
+  "comment": "ลงนามแล้วเรียบร้อย",
+  "status": "SIGN"
+}
+
+
+### 3. ค้นหาเอกสาร (SEARCH)
+POST http://localhost:8080/api/services/search
+Content-Type: application/json
+
+{
+  "requesterId": 1,
+  "providerId": 2,
+  "keyword": "Q1"
+}
+
+### 4. ขอให้แก้ไขเอกสาร (EDIT) แก้เป้นสมหมาย
+POST http://localhost:8080/api/services/edit
+Content-Type: application/json
+
+{
+  "requesterId": 2,
+  "providerId": 1,
+  "documentId": 1,
+  "editDetails": "สมหมาย"
+}
+
+### 5. สรุปเอกสารด้วย LLM (LLM_SUMMARY)
+POST http://localhost:8080/api/services/summarize
+Content-Type: application/json
+
+{
+  "requesterId": 1,
+  "providerId": 2,
+  "documentId": 2
+}

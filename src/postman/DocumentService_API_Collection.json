@@ -1,0 +1,66 @@
+{
+  "info": {
+    "name": "DocumentService API (ฝั่ง B)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Sign Document",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"string\",\n  \"documentId\": \"string\",\n  \"signature\": \"string\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/services/sign",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "services",
+            "sign"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Edit Document",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"documentId\": \"string\",\n  \"newContent\": \"string\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/services/edit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "services",
+            "edit"
+          ]
+        }
+      }
+    }
+  ]
+}
